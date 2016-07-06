@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+.top{ width:100%; background-color:#234686; padding:20px 0;margin:0 auto; }
+*{ font-size:12px; font-family:"微软雅黑"}
+.logo{margin-left:40px;}
+ul{padding:0;}
+dl{margin:0;}
+img{border:none;}
+dd{padding:0; margin:0}
+body{margin:0;}
+a{text-decoration:none !important;}
+li{list-style:none;}
+.clearfix:after, .clearfix:before{	display: table;
+	content: " "
+}
+.nav{text-align:center; float:right; margin-right:40px; margin-bottom:0;    position: absolute;
+    top: 0;
+    right: 0;}
+.nav a{color:#fff;}
+.nav li{float:left; margin-right:40px;}
+.hyy p{text-align:center; font-size:50px; color:red; padding-top:50px;}
+.content{ width:100%;margin:0 auto; position:relative;}
+.left-column{width:15%; text-align:center; float:left; background-color:#e1e7f5; height:680px;}
+.left-column h5{color:#fff; background-color:#3399fe; font-size:18px; border-radius:10px; margin:0 20px; padding:4px 15px; height:20px; line-height:18px;}
+.service{height:45px; background-color:#b5d6f9; padding-top:15px;}
+.call dt{background-color:#e1e7f5; line-height:35px; font-size:14px; border-bottom:1px dashed #c4c9cf;}
+.main{border-top:1px dashed #ffffff;}
+.call dd{line-height:32px; background-color:#d5dbe9;}
+.call dd a{color:#292728;}
+.current{background-color:#f8f8f8 !important;}
+.current a{color:#fd9363 !important;}
+.right-content{width:85%; position:relative; position:absolute; left:15%; background-color:#f8f8f8;}
+.ck p{background-color:#f1f1f1; font-size:14px; color:#191917; margin:0; height:60px;}
+.ck p span{ position:absolute; top:30px; left:40px; background-color:#d0d6e4; line-height:30px; padding:0 10px;}
+.ck{clear:both;}
+.srxz{background-color:#f8f8f8; padding-left:40px;}
+input, select{background-color:#f1f1f1; border:1px solid #c1c1c1; padding-left:10px; margin:10px; height:30px; border-radius:3px; min-width:200px;}
+.srxz span{padding-right:5px;}
+.sub{float:right; background-color:#1e4a91; padding:5px 20px; margin-right:30px;  border-radius:3px;}
+.sub a{color:#fff;}
+
+.daohanglink{
+		height:40px; line-height:40px; vertical-align:middle;
+		background-color:rgb(248,248,248);
+		margin-bottom:15px;
+		}
+	.daohanglink span{
+		margin-left:5px;}
+	.daohang{
+	float: left;
+	height: 15px;
+	width: 5px;
+	border-left-width: 5px;
+	border-left-style: solid;
+	border-left-color: #036;
+	margin-top:12px;
+	margin-left:15px;
+		}
+.inner_content{width:85%; padding-left:40px; }
+.brown{text-align:center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

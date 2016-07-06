@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name></display-name>
+	<welcome-file-list>
+		<welcome-file>HomePage.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!--这是登陆过滤器 -->
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>filter.LoginFilter</filter-class>
+		<init-param>
+			<param-name>noLoginPaths</param-name>
+			<param-value>LoginServlet;ImageServlet;registerServlet;LimitItemsServlet;LimitByTypeServlet;SortItemsServlet;
+			</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/servlet/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 这是登陆控制器 -->
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/servlet/LoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 这是分页查询控制器 -->
+	<servlet>
+		<servlet-name>LimitItemsServlet</servlet-name>
+		<servlet-class>servlet.LimitItemsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LimitItemsServlet</servlet-name>
+		<url-pattern>/servlet/LimitItemsServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 这是注册控制器 -->
+	<servlet>
+		<servlet-name>registerServlet</servlet-name>
+		<servlet-class>servlet.registerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registerServlet</servlet-name>
+		<url-pattern>/servlet/registerServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 这是验证码控制器 -->
+	<servlet>
+		<servlet-name>ImageServlet</servlet-name>
+		<servlet-class>servlet.ImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ImageServlet</servlet-name>
+		<url-pattern>/servlet/ImageServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 这是购买商品控制器 -->
+	<servlet>
+		<servlet-name>ShowItemServlet</servlet-name>
+		<servlet-class>servlet.ShowItemServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ShowItemServlet</servlet-name>
+		<url-pattern>/servlet/ShowItemServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 这是购物车控制器 -->
+	<servlet>
+		<servlet-name>CarServlet</servlet-name>
+		<servlet-class>servlet.CarServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CarServlet</servlet-name>
+		<url-pattern>/servlet/CarServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 这是查看购物车的控制器 -->
+	<servlet>
+		<servlet-name>ShowCarServlet</servlet-name>
+		<servlet-class>servlet.ShowCarServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowCarServlet</servlet-name>
+		<url-pattern>/servlet/ShowCarServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 这是注销用户的控制器 -->
+	<servlet>
+		<servlet-name>LogOut</servlet-name>
+		<servlet-class>servlet.LogOut</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogOut</servlet-name>
+		<url-pattern>/servlet/LogOut</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 这是购买商品的控制器 -->
+	<servlet>
+		<servlet-name>BuyServlet</servlet-name>
+		<servlet-class>servlet.BuyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BuyServlet</servlet-name>
+		<url-pattern>/servlet/BuyServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 这是商品添加控制器 -->
+	<servlet>
+		<servlet-name>addItemServlet</servlet-name>
+		<servlet-class>servlet.addItemServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addItemServlet</servlet-name>
+		<url-pattern>/servlet/addItemServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 这是根据商品类型分页的控制器 -->
+	<servlet>
+		<servlet-name>LimitByTypeServlet</servlet-name>
+		<servlet-class>servlet.LimitByTypeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LimitByTypeServlet</servlet-name>
+		<url-pattern>/servlet/LimitByTypeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 这是从购物车里删除商品的控制器 -->
+	<servlet>
+		<servlet-name>deleteCarServlet</servlet-name>
+		<servlet-class>servlet.deleteCarServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteCarServlet</servlet-name>
+		<url-pattern>/servlet/deleteCarServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 这是根据不同规则对商品排序的控制器 -->
+	<servlet>
+		<servlet-name>SortItemsServlet</servlet-name>
+		<servlet-class>servlet.SortItemsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SortItemsServlet</servlet-name>
+		<url-pattern>/servlet/SortItemsServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>
